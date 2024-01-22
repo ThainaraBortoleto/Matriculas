@@ -1,7 +1,9 @@
 <script setup>
-function signUp() {
-  alert('Matricule-se')
-}
+import Dialog from "@/components/Dialog.vue";
+import { ref} from "vue";
+import Signup from "@/components/Signup.vue";
+
+const openDialog = ref(false);
 </script>
 <template>
   <nav
@@ -94,11 +96,14 @@ function signUp() {
         </ul>
 
         <div class="flex items-center">
-          <button @click="signUp" class="bg-pink-700 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full">
+          <button @click="openDialog = !openDialog" class="bg-pink-700 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full">
             Inscreva-se
           </button>
         </div>
       </div>
     </div>
   </nav>
+  <Dialog v-model="openDialog" >
+    <Signup />
+  </Dialog>
 </template>
