@@ -1,5 +1,7 @@
 <script setup>
 
+import create from "@/services/UsersService";
+
 defineEmits(['update:modelValue'])
 defineProps({
   modelValue: {
@@ -7,6 +9,10 @@ defineProps({
     default: false
   }
 })
+
+function setSignUp() {
+  create();
+}
 </script>
 
 <template>
@@ -38,7 +44,7 @@ defineProps({
 
             <section class="flex justify-around">
               <button @click="$emit('update:modelValue', false)" class="rounded bg-gray-400 text-white px-4 py-1">Cancelar</button>
-              <button class="rounded bg-blue-600 text-white px-4 py-1">Confirmar</button>
+              <button class="rounded bg-blue-600 text-white px-4 py-1" @click="setSignUp">Confirmar</button>
             </section>
           </div>
         </transition>
