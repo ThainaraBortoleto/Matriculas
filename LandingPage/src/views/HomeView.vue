@@ -8,6 +8,15 @@ import FooterComponent from '../components/FooterComponent.vue';
   <main>
     <Header />
     <TheWelcome />
-    <FooterComponent class="absolute bottom-0 w-full"/>
+    <FooterComponent class="bottom-0 w-full"/>
   </main>
 </template>
+
+<style>
+.texto-vermelho {
+  color: red;
+}
+.texto-verde {
+  color: green;
+}
+</style>

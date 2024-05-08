@@ -1,4 +1,15 @@
 // eslint-disable-next-line vue/multi-word-component-names
+<script setup>
+import { defineProps } from 'vue';
+
+const props = defineProps([
+  // eslint-disable-next-line no-undef
+  'nome'  
+])
+
+console.log(props.nome);
+</script>
+
 <template>
 <div class="carousel relative shadow-2xl bg-white m-3">
     <div class="carousel-inner relative overflow-hidden w-full">
@@ -13,7 +24,7 @@
         checked="checked"
       />
       <div class="carousel-item absolute opacity-0" style="height: 50vh">
-        <div class="block h-full w-full text-white text-5xl text-center slide-1"></div>
+        <div class="block h-full w-full text-white text-5xl text-center slide-1">{{ nome }}</div>
       </div>
       <label
         for="carousel-3"

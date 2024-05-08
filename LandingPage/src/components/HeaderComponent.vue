@@ -4,6 +4,11 @@ import { ref} from "vue";
 import Signup from "@/components/Signup.vue";
 
 const openDialog = ref(false);
+
+function Login() {
+
+}
+
 </script>
 <template>
   <nav
@@ -96,7 +101,10 @@ const openDialog = ref(false);
         </ul>
 
         <div class="flex items-center">
-          <button @click="openDialog = !openDialog" class="bg-pink-700 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full">
+          <button @click="Login()" class="bg-pink-700 hover:bg-pink-600 text-white font-bold py-2 px-4 mr-2 rounded-full">
+           Login
+          </button>
+          <button @click="openDialog = true" class="bg-pink-700 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full">
             Inscreva-se
           </button>
         </div>

@@ -1,14 +1,17 @@
 <script setup>
 import Dialog from '@/components/Dialog.vue'
+import SectionCursos from './SectionCursos.vue';
 import Carousel from  '@/components/Carousel.vue'
+
 </script>
 
 <template>
   <Carousel />
-  
-  <div>
+  <SectionCursos />
+
+  <!-- <div>
     <Dialog />
-  </div>
+  </div> -->
 </template>
 
 
