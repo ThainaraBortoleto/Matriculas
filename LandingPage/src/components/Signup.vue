@@ -121,7 +121,7 @@ alert(nome.value)
             />
             <p class="text-red-500 text-xs italic">CAMPO OBRIGATÓRIO</p>
           </div>
-          <button class="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="cadastro">enviar</button>
+          <button class="mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="activeTab = 2">enviar</button>
         </form>
       </div>
 
